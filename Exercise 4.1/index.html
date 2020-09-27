@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Form </title>
+    <style>
+        table {
+            border-spacing: 15px;
+        }
+
+        /* The swimch - the box around the slider */
+        .swimch {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 17px;
+        }
+
+        /* Hide default HTML checkbox */
+        .swimch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 17px;
+            width: 17px;
+            left: 0px;
+            bottom: 0px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(13px);
+            -ms-transform: translateX(13px);
+            transform: translateX(13px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body>
-<h3>
+<body bgcolor=#CCCCFF>
+<!--<h3>
     Form Design Exercise:
 </h3>
 <p style="font-family: Helvetica;font-size: medium">
@@ -15,6 +83,67 @@
 <p style="font-family: Helvetica;font-size: medium">
     Try to replecate the format of the form in the page.<br>
     Make use of "Label", "Input" and "Table".
-</p>
+</p> -->
+<table >
+    <div>
+    <tr>
+        <div>
+            <h1>Individual Project</h1>
+            <p>Choose a topic, and research interest for the individual visualization project.</p>
+            <p>* Required</p>
+        </div>
+    </tr>
+    <tr>
+        <label>Email Address</label><br>
+        <input type="text" placeholder="Your email"><br>
+    </tr>
+    <tr>
+        <label>First Name</label><br>
+        <input type="text" placeholder="Your answer"><br>
+    </tr>
+    <tr>
+        <label>Last Name</label><br>
+        <input type="text" placeholder="Your answer"><br>
+    </tr>
+    <tr>
+        <label>Research Interest (list at least 3)</label><br>
+        <input type="text" placeholder="Your answer"><br>
+    </tr>
+    <tr>
+        <label>Project Title - (e.g. income vs education US Census) *</label><br>
+        <input type="text" placeholder="Your answer"><br>
+    </tr>
+    <tr>
+        <label>Top Skills</label><br>
+        <input type="checkbox" name="SQL"><label>SQL</label><br>
+        <input type="checkbox" name="Python programming"><label>Python programming</label><br>
+        <input type="checkbox" name="Matlab"><label>Matlab</label><br>
+        <input type="checkbox" name="D3js and Javascript"><label>D3js and Javascript</label><br>
+        <input type="checkbox" name="C# VB.net"><label>C# VB.net</label><br>
+        <input type="checkbox" name="PHP"><label>PHP</label><br>
+        <input type="checkbox" name="Node.JS"><label>Node.JS</label><br>
+        <input type="checkbox" name="Web design tools (e.g. Wordpress)"><label>Web design tools (e.g. Wordpress)</label><br>
+        <input type="checkbox" name="HTML and CSS"><label>HTML and CSS</label><br>
+        <input type="checkbox" name="Excel"><label>Excel</label><br>
+        <input type="checkbox" name="PowerBI"><label>PowerBI</label><br>
+        <input type="checkbox" name="Tableau"><label>Tableau</label><br>
+        <input type="checkbox" name="Option 13"><label>Option 13</label><br>
+        <input type="checkbox" name="Other:"><label>Other:</label><input type="text"><br>
+    </tr>
+    <tr>
+        <label>Suggestions or Questions</label><br>
+        <input type="text" placeholder="Your answer"><br>
+    </tr>
+    <tr>
+        <label class="swimch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <label>Send me a copy of my responses.</label><br>
+    </tr>
+    <tr>
+        <input type="submit" value="Submit">
+    </tr>
+</table>
 </body>
 </html>
