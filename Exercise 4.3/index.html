@@ -4,6 +4,11 @@
     <title>Week 4</title>
     <meta charset="utf-8">
     <!--create a new stylesheet document and include it here-->
+    <style>
+        p {
+            width : 25%;
+        }
+    </style>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -11,21 +16,21 @@
     <h1>CIS 586/ DSC 530 Week 4: Markup and Style</h1>
     <nav role="navigation" class="nav-bar">
         <ul>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="IndividualProject.html">Individual Project</a></li>
-            <li><a href="GroupProject.html">Group Project</a></li>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="#individual">Individual Project</a></li>
+            <li><a href="#group">Group Project</a></li>
         </ul>
     </nav>
     <div class="projects">
-        <div class="pro individual">
+        <div id="individual" class="pro individual">
             <h2>Individual Project</h2>
             <img src="assets/filler.jpg" alt="placeholder"/>
-            <p>Some description</p>
+            <p>My individual project is based on tracking the positivity and negeativity of tweets based on how affected by a given US State is from COVID-19 and whether and  whether it is mood that is affected by COVID-19 or simply the amount of online activity</p>
         </div>
-        <div class="pro group">
+        <div id="group" class="pro group">
             <h2>Group Project</h2>
             <img src="assets/filler.jpg" alt="placeholder"/>
-            <p>Some description</p>
+            <p>Our group project is based on reading the Moon phases and determining if there is correlation between any increased COVID-19 activity (Infection of otherwise), and the different phases of the Moon.</p>
         </div>
     </div>
     <div class="special-content">
